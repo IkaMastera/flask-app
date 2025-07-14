@@ -25,10 +25,10 @@ def get_pull_requests(state):
 
     if response.status_code == 200:
         for pr in response.json():
-        pr_list.append({
-            "title": pr.get("title"),
-            "num": pr.get("number"),
-            "link": pr.get("html_url")
+            pr_list.append({
+                "title": pr.get("title"),
+                "num": pr.get("number"),
+                "link": pr.get("html_url")
         })
 
     return pr_list
